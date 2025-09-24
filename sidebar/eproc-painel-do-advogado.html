@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang=pt-br style=font-size:110%><!--
  Page saved with SingleFile 
- url: ..eproc/controlador.php?acao=painel_advogado_listar&hash=599e01d31df4355d9279cee66fcaf51f 
- saved date: Wed Sep 24 2025 03:02:35 GMT-0300 (Horário Padrão de Brasília)
+ url: 
 -->
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -20,8 +19,7 @@
     }
 </style>
 <link rel=canonical href="eproc-painel-do-advogado.html">
-<meta http-equiv=content-security-policy
-    content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline' 'self' https:; media-src 'self' data:; script-src 'unsafe-inline' data: 'self' https:; object-src 'self' data:; frame-src 'self' data:; connect-src 'self' http://127.0.0.1:3000;">
+<meta http-equiv="content-security-policy" content="default-src * 'self' data:; style-src 'unsafe-inline' *; script-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://code.jquery.com;">
 <style>
     img[src="data:,"],
     source[src="data:,"] {
@@ -3007,7 +3005,7 @@
                                         </div>
                                         <div class=dropdown-divider></div>
                                         <a id=btn-encerrar-sessao class="d-flex profile-item"
-                                            href="..eproc/controlador.php?acao=sair&amp;hash=b22a835581f6fde2bbb05894e37e652d">
+                                            href="eproc-login.html">
                                             <div><i class=material-icons aria-hidden=true>exit_to_app</i></div>Encerrar
                                             Sessão <span class="ml-1 text-muted font-italic">(Ctrl+Shift+F4)</span>
                                         </a>
@@ -3325,14 +3323,14 @@
                                                             <td id=processoscomprazoemaberto>Processos com prazo em
                                                                 aberto
                                                             <td class=text-center><a
-                                                                    href="..eproc/controlador.php?acao=citacao_intimacao_prazo_aberto_listar&amp;hash=7c5a9d152af1c68449c89c908f37b205"
+                                                                    href="eproc-processos-com-prazo-em-aberto.html"
                                                                     target=painel_remotoRS
                                                                     aria-describedby=processoscomprazoemaberto>29</a>
                                                         <tr class=infraTrClara>
                                                             <td id=processoscomprazoemaberto-urgente>Processos com prazo
                                                                 em aberto - urgente
                                                             <td class=text-center><a
-                                                                    href="..eproc/controlador.php?acao=citacao_intimacao_prazo_aberto_listar&amp;urgente=true&amp;hash=1be085353f5f0d6321e8c7cef7058290"
+                                                                    href="eproc-processos-com-prazo-em-aberto.html"
                                                                     target=painel_remotoRS
                                                                     aria-describedby=processoscomprazoemaberto-urgente>0</a>
                                                         <tr class=infraTrClara>
@@ -3346,7 +3344,7 @@
                                                             <td id=processospendentesdecitação/intimação>Processos
                                                                 pendentes de citação/intimação
                                                             <td class=text-center><a
-                                                                    href="..eproc/controlador.php?acao=citacao_intimacao_pendente_listar&amp;hash=32d2cdf5525810573b56f9322f120eb9"
+                                                                    href="eproc-processos-com-prazos-em-aberto.html"
                                                                     target=painel_remotoRS
                                                                     aria-describedby=processospendentesdecitação/intimação>6</a>
                                                         <tr class=infraTrClara>
@@ -3361,7 +3359,7 @@
                                                             <td id=processospendentesdecitação-art334cpc>Processos
                                                                 pendentes de citação - art 334 CPC
                                                             <td class=text-center><a
-                                                                    href="..eproc/controlador.php?acao=citacao_art334_pendente_listar&amp;hash=514fed8c9aff34523df6a1a648bec0e3"
+                                                                    href="eproc-processos-com-prazos-em-aberto.html"
                                                                     target=painel_remotoRS
                                                                     aria-describedby=processospendentesdecitação-art334cpc>0</a>
                                                         <tr class=infraTrClara>
@@ -3396,7 +3394,7 @@
                                                         <td valign=top class=text-center><a
                                                                 aria-describedby=criados-aguardam-abertura
                                                                 id=painelProcuradorConciliacoesCriadas
-                                                                href="..eproc/controlador.php?acao=conciliacao_listar&amp;acao_origem=painel_advogado_listar&amp;status=0&amp;hash=f2de7425a18e3b40883341d0f75480fc">0</a>
+                                                                href="eproc-processos-com-prazos-em-aberto.html">0</a>
                                                     </tr>
                                                     <tr class=infraTrClara>
                                                         <td valign=top id=abertos-em-negociacao>Abertos / Em negociação
@@ -3410,32 +3408,29 @@
                                                         <td valign=top class=text-center><a
                                                                 aria-describedby=aguardam-manifestacao
                                                                 id=painelProcuradorConciliacoesMsgNaoRespondidas
-                                                                href="..eproc/controlador.php?acao=conciliacao_listar&amp;acao_origem=painel_advogado_listar&amp;status=6&amp;hash=5318a9c577fbdce930f44dca56fb8f8a">0</a>
+                                                                href="eproc-processos-com-prazos-em-aberto.html">0</a>
                                                     </tr>
                                             </table>
                                         </div>
                                     </fieldset>
                                     <br>
                                     <li>
-                                        <a href="..sidebar/menu_textual.html" class=collapsed tabindex=0 data-toggle
+                                        <a href="eproc-menu-textual.html" class=collapsed tabindex=0 data-toggle
                                             data-target=#menu-ul-106 aria-label="Menu Textual">
                                             <span class=menu-item-text>Menu Textual</span>
                                             <span class="sub-arrow material-icons">arrow_drop_down</span>
                                         </a>
                                     </li>
-                                    <li class=has-submenu>
-                                        <a href=# class=collapsed tabindex=0 data-toggle=collapse
-                                            data-target=#menu-ul-471 aria-label="Alvará Eletrônico Automatizado">
-                                            <span class=menu-item-text>Alvará Eletrônico Automatizado</span>
-                                            <span class="sub-arrow material-icons">arrow_drop_down</span>
-                                        </a>
-                                        <ul class="collapse" id=menu-ul-471>
-                                            <li><a href="eproc-consultar-alvara-eletronico-automatizado.html">Consultar
-                                                    Alvará Eletrônico Automatizado</a></li>
-                                            <li><a href="eproc-alvaras-eletronicos-por-advogado.html">Relatório Alvarás
-                                                    Eletrônicos por Advogado</a></li>
-                                        </ul>
-                                    </li>
+<li class="has-submenu">
+    <a href="javascript:void(0)" class="collapsed" data-toggle="collapse" data-target="#menu-ul-471-adv" aria-label="Alvará Eletrônico Automatizado">
+        <span class="menu-item-text">Alvará Eletrônico Automatizado</span>
+        <span class="sub-arrow material-icons">arrow_drop_down</span>
+    </a>
+    <ul class="collapse" id="menu-ul-471-adv">
+        <li><a href="eproc-consultar-alvara-eletronico-automatizado.html">Consultar Alvará Eletrônico Automatizado</a></li>
+        <li><a href="eproc-alvaras-eletronicos-por-advogado.html">Relatório Alvarás Eletrônicos por Advogado</a></li>
+    </ul>
+</li>
                                     <li>
                                         <a href="eproc-associar-assistente-ao-advogado.html" class=collapsed tabindex=0
                                             data-toggle data-target=#menu-ul-209
@@ -3703,5 +3698,7 @@
         };
     </script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

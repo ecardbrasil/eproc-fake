@@ -232,37 +232,17 @@
  <div id=kc-form-wrapper>
  <form id=kc-form-login action="https://keycloak-eks.tjrs.jus.br/realms/eproc/login-actions/authenticate?session_code=1xEqYXonmHnsgsntKehNzIbk9YKuDUvOBsrG-vsSKto&amp;execution=2e162104-e4af-4174-8544-ca9f14018b24&amp;client_id=cnj.jus.br&amp;tab_id=7TO2SJGmhdw&amp;client_data=eyJydSI6Imh0dHBzOi8vc3NvLmNsb3VkLnBqZS5qdXMuYnIvYXV0aC9yZWFsbXMvcGplL2Jyb2tlci90anJzL2VuZHBvaW50IiwicnQiOiJjb2RlIiwic3QiOiJNbk1wQk9DclF6U1RySFlmbHktYWNDZGRDMDcwLTRoclVNMmhaeXB1WXhnLm92N0Z5alNjT2RFLmVwcm9jLXRqcnMtMWcifQ&amp;eproc_client_id=eproc-tjrs-1g" method=post autocomplete=off>
  <div class="form-group mb-2">
- <label for=username>Usuário</label>
- <input tabindex=2 id=username class="form-control form-control-sm" name=username value type=text autofocus autocomplete=false aria-autocomplete=off aria-invalid dir=ltr>
+	 <label for="username">Usuário</label>
+	 <input tabindex="2" id="username" class="form-control form-control-sm" name="username" type="text" autofocus autocomplete="off" aria-autocomplete="off" aria-invalid="false" dir="ltr">
  </div>
  <div class="form-group mb-4">
- <label for=password>Senha</label>
- <div class=d-flex dir=ltr>
- <span class=input-group><input type=password style=display:none name=password autocomplete=one-time-code><input tabindex=3 id=password class="form-control form-control-sm masked" autocomplete=off aria-autocomplete=off aria-invalid value type=text></span>
- <span id=showHidePwd style="cursor:pointer;height:calc(1.5em + 0.5rem)" class="input-group-text form-control-sm">
- <i class="material-icons m-0">visibility</i>
- </span>
+	 <label for="password">Senha</label>
+	 <div class="d-flex" dir="ltr">
+		 <input tabindex="3" id="password" class="form-control form-control-sm masked" name="password" type="password" autocomplete="off" aria-autocomplete="off" aria-invalid="false">
+	 </div>
  </div>
- </div>
- <div id=kc-form-buttons>
- 
- <input tabindex=7 class="btn btn-sm btn-primary w-100 btn-lg" name=login id=kc-login type=submit value=Entrar>
- <br>
- <div class="my-3 border-bottom d-flex">
- <div class="w-100 text-left font-weight-light">Outras opções de acesso</div>
- <div class=flex-shrink-1>
- <a href=# id=dropdownMenuButton data-toggle=dropdown aria-label=Ajuda><i class=material-icons>help_outline</i></a>
- <div class="dropdown-menu sf-hidden">
- 
- 
- 
- 
- </div>
- </div>
- </div>
- <button tabindex=8 type=button class="btn btn-sm btn-secondary w-100" name=loginCertificate id=kc-login-certificate>
- Certificado Digital
- </button>
+ <div id="kc-form-buttons">
+	 <input tabindex="7" class="btn btn-sm btn-primary w-100 btn-lg" name="login" id="kc-login" type="button" value="Entrar" onclick="window.location.href='sidebar/eproc-painel-do-advogado.html'">
  </div>
  </form>
  </div>

@@ -1,0 +1,22 @@
+import re
+import pathlib
+
+# Regex para capturar links do eproc com num_processo variável
+regex_link_processo = re.compile(
+    r"https://eproc1g\.tjrs\.jus\.br/eproc/controlador\.php\?[^\"']*num_processo=\d+[^\"']*"
+)
+
+for path in pathlib.Path(".").rglob("*.html"):
+    try:
+        texto = path.read_text(encoding="utf-8", errors="ignore")
+
+        encontrados = regex_link_processo.findall(texto)
+        if encontrados:
+            for e in encontrados:
+                print(f"{path}: LINK -> {e} → eproc-pagina-processo.html")
+
+            texto = regex_link_processo.sub("eproc-pagina-processo.html", texto)
+            path.write_text(texto, encoding="utf-8")
+
+    except Exception as e:
+        print(f"Erro no arquivo {path}: {e}")
