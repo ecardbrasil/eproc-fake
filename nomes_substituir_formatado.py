@@ -1,12 +1,8 @@
-
-
 import re
 import unicodedata
-
 def remover_acentos(txt):
     return ''.join(c for c in unicodedata.normalize('NFD', txt)
                    if unicodedata.category(c) != 'Mn')
-
 def gerar_regex_nome(nome):
     # Divide o nome em partes e permite qualquer quantidade de espaços, quebras de linha ou tags HTML entre elas
     partes = nome.strip().split()
@@ -14,7 +10,6 @@ def gerar_regex_nome(nome):
     separador = r'(?:\s|<[^>]+>|\n|\r)*'
     regex = separador.join(map(re.escape, partes))
     return regex
-
 def replace_party_names(text, nomes):
     log = []
     for nome in nomes:
@@ -45,12 +40,10 @@ def replace_party_names(text, nomes):
             continue
         log.append(f"Não encontrado: {nome}")
     return text, log
-
 if __name__ == "__main__":
     # Lê o arquivo HTML
     with open('sidebar/eproc-processos-com-prazo-em-aberto.html', 'r', encoding='utf-8') as f:
         texto = f.read()
-
     # Regex para capturar nomes de partes processuais (pessoas físicas/jurídicas)
     padrao_nome = r'([A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s|<[^>]+>|\n|\r)+(?:[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,}(?:\s|<[^>]+>|\n|\r)+)*[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{2,})'
     nomes_encontrados = set()
@@ -72,12 +65,10 @@ if __name__ == "__main__":
             partes = set(nome.split())
             if not partes.issubset(termos_genericos):
                 nomes_encontrados.add(nome)
-
     nomes = sorted(nomes_encontrados)
     print(f"Nomes extraídos: {len(nomes)}")
     for nome in nomes:
         print(f"- {nome}")
-
     texto_substituido, log = replace_party_names(texto, nomes)
     with open('sidebar/eproc-processos-com-prazo-em-aberto_saida.html', 'w', encoding='utf-8') as f:
         f.write(texto_substituido)

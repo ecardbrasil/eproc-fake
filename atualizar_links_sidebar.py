@@ -1,8 +1,6 @@
 import os
 import re
-
 sidebar_dir = "sidebar"
-
 # Mapeia nomes antigos para novos nomes amigáveis
 file_map = {}
 for filename in os.listdir(sidebar_dir):
@@ -12,7 +10,6 @@ for filename in os.listdir(sidebar_dir):
         # Remove prefixos comuns para facilitar o match
         base_clean = re.sub(r'^eproc-|^sistema-eproc-', '', base)
         file_map[base_clean.replace('-', ' ')] = filename
-
 # Atualiza os links internos em todos os arquivos HTML
 for filename in os.listdir(sidebar_dir):
     if filename.endswith(".html"):
